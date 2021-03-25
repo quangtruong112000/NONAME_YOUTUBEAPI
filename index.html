@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>bt</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style type="text/css">
+		#back-to-top {
+		    position: fixed;
+		    bottom: 40px;
+		    right: 40px;
+		    z-index: 9999;
+		    width: 32px;
+		    height: 32px;
+		    text-align: center;
+		    line-height: 30px;
+		    background: #FF7043;
+		    color: #444;
+		    cursor: pointer;
+		    border: 0;
+		    border-radius: 2px;
+		    text-decoration: none;
+		    transition: opacity 0.2s ease-out;
+		    opacity: 0;
+		}
+		#back-to-top:hover {
+		    background: #FF5722;
+		}
+		#back-to-top.show {
+		    opacity: 1;
+		}
+	</style>
+</head>
+<body>
+	
+	<main>
+	     <div id="main-left">
+	     	<form id="frm-search" action="#">
+	     		<input type="text" name="keyword" id="keyword" placeholder="Type something and enter" autocomplete="off" autofocus>
+	     		<input type="button" value="CLEAR" id="clear">
+	     	</form>
+	     	<div id="result-search"></div>
+	     </div>
+
+	     <div id="main-right">
+	     	<div id="video"></div>
+	     	<p id="title-queue"></p>
+	     	<div id="queue-play"></div>
+	     </div>
+
+	     <div class="clear-fix"></div>
+	     <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+	</main>
+
+	<footer>
+		<p>NO NAME</p>	
+	</footer>
+
+	<!-- script -->
+	<script src="js/jquery.js"></script>
+	<script src="js/app.js"></script>
+	<script src="https://apis.google.com/js/client.js?onload=init"></script>
+	<script src="http://www.youtube.com/player_api"></script>
+
+	<script type="text/javascript">
+		if ($('#back-to-top').length) {
+		    var scrollTrigger = 100, // px
+		        backToTop = function () {
+		            var scrollTop = $(window).scrollTop();
+		            if (scrollTop > scrollTrigger) {
+		                $('#back-to-top').addClass('show');
+		            } else {
+		                $('#back-to-top').removeClass('show');
+		            }
+		        };
+		    // backToTop();
+		    $(window).on('scroll', function () {
+		        backToTop();
+		    });
+		    $('#back-to-top').on('click', function (e) {
+		        e.preventDefault();
+		        $('html,body').animate({
+		            scrollTop: 0
+		        }, 500);
+		    });
+		}
+	</script>
+
+	
+</body>
+</html>

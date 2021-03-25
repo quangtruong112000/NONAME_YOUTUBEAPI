@@ -1,0 +1,171 @@
+*
+{
+	margin:0;
+	padding: 0;
+}
+
+body
+{
+	font-family: Arial, Tahoma;
+}
+
+#main-left
+{
+	float: left;
+	width: 50%;
+	/*background-color: red;*/
+}
+
+#main-right
+{
+	float: right;
+	width: 50%;
+	/*background-color: yellow;*/
+}
+
+#frm-search
+{
+	padding: 40px 20px;
+}
+#frm-search p:nth-child(1)
+{
+	text-align: center;
+}
+#frm-search input[type=text]
+{
+	width: calc(100% - 140px);
+	padding: 8px 20px;
+    border: 1px solid #C5C5C5;
+    border-radius: 3px;
+}
+#frm-search input[type=button]
+{
+	padding: 8px 5px;
+	background-color: #C3C3C3;
+	border: none;
+	border-radius: 3px;
+	color: #FFF;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+#frm-search input[type=button]:hover
+{
+	background-color: #939393;
+}
+
+#result-search, #queue-play
+{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.item-video
+{
+	width: calc(100% - 40px);
+	height:80px;
+	padding: 10px 20px;
+	border-bottom: 1px solid #BBDEFB;
+}
+.item-video:hover
+{
+	background-color: #ECEFF1;
+}
+.item-video .thumb
+{
+	float: left;
+	width: 120px;
+	height: 80px;
+}
+.item-video div
+{
+	float: left;
+	width: calc(100% - 230px);
+	height: 80px;
+	margin-left: 20px;
+}
+.item-video div .title, .len
+{
+	font-size: 16px;
+}
+.item-video div .title
+{
+	width: 100%;
+}
+.item-video div .len
+{
+	color: #FF9800;
+}
+.channelTitle
+{
+	color: #81C784; 
+}
+.item-video .add, .play, .remove
+{
+	float: right;
+	width: 70px;
+	border: none;
+	border-radius: 3px;
+	color: #FFF;
+	line-height: 30px;
+	cursor: pointer;
+	margin: 5px 0px;
+}
+.item-video .add
+{
+	background-color: #2196F3;
+}
+.item-video .play
+{
+	background-color: #00E55F;
+}
+.item-video .remove
+{
+	background-color: #FF7043;
+}
+.item-video .add:hover
+{
+	background-color: #1565C0;
+}
+.item-video .play:hover
+{
+	background-color: #00C853;
+}
+.item-video .remove:hover
+{
+	background-color: #FF5722;
+}
+
+#video
+{
+	margin-left: 20px;
+}
+
+#main-right #video iframe
+{
+	margin: 0 auto;
+}
+#title-queue
+{
+	line-height: 50px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	font-size: 25px;
+	padding: 0px 20px;
+	color: #D32F2F;
+}
+.clear-fix{
+	clear: both;
+}
+
+footer
+{
+	height: 50px;
+	background-color: #000000;
+}
+footer p
+{
+	line-height: 50px;
+	text-align: center;
+	color: #FFFFFF;
+}
